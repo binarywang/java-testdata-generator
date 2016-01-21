@@ -4,8 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
-import java.util.Random;
 
+import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.collect.Maps;
@@ -31,14 +31,14 @@ import com.google.common.collect.Maps;
 public class IDCardNumberGenerator {
 
     public static String generate() {
-        Random random = new Random();
         Map<String, String> code = getAreaCode();
-        String areaCode = code.keySet().toArray(new String[0])[random
-            .nextInt(code.size())]
-            + StringUtils.leftPad((random.nextInt(9998) + 1) + "", 4, "0");
+        String areaCode = code.keySet().toArray(new String[0])[RandomUtils
+            .nextInt(0, code.size())]
+            + StringUtils.leftPad((RandomUtils.nextInt(0, 9998) + 1) + "", 4,
+                "0");
 
         String birthday = new SimpleDateFormat("yyyyMMdd").format(randomDate());
-        String randomCode = String.valueOf(1000 + random.nextInt(999))
+        String randomCode = String.valueOf(1000 + RandomUtils.nextInt(0, 999))
             .substring(1);
         String pre = areaCode + birthday + randomCode;
         String verifyCode = getVerifyCode(pre);
@@ -54,9 +54,7 @@ public class IDCardNumberGenerator {
         calendar.set(2000, 1, 1);
         long laterDate = calendar.getTime().getTime();
 
-        Random random = new Random();
-        long chosenDate = earlierDate
-            + (long) (random.nextDouble() * (laterDate - earlierDate));
+        long chosenDate = RandomUtils.nextLong(earlierDate, laterDate);
 
         return new Date(chosenDate);
     }
