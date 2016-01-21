@@ -13,8 +13,8 @@ import org.apache.commons.lang3.StringUtils;
  * 2，将奇位乘积的个十位全部相加，再加上所有偶数位上的数字
  * 3，将加法和加上校验位能被 10 整除。
  */
-public class BankCardGenerator {
-    public void generate() {
+public class BankCardNumberGenerator {
+    public static String generate() {
         Random random = new Random();
 //        ContiguousSet<Integer> sets = ContiguousSet
 //            .create(Range.closed(622126, 622925), DiscreteDomain.integers());
@@ -38,6 +38,6 @@ public class BankCardGenerator {
         char checkCode = luhmSum % 10 == 0 ? '0'
             : (char) (10 - luhmSum % 10 + '0');
 
-        System.err.println(bardNo + checkCode);
+        return bardNo + checkCode;
     }
 }

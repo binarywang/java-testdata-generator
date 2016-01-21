@@ -8,19 +8,8 @@ import java.util.Map;
 import java.util.Random;
 
 import org.apache.commons.lang3.StringUtils;
-import org.junit.Test;
 
-public class IDCardGenerator {
-
-    @Test
-    public void generateRandomDate() {
-        System.err.println(randomDate());
-    }
-
-    @Test
-    public void main() {
-        System.err.println(generate());
-    }
+public class IDCardNumberGenerator {
 
     public static String generate() {
         Random random = new Random();
@@ -39,7 +28,7 @@ public class IDCardGenerator {
         return result;
     }
 
-    private static Date randomDate() {
+    static Date randomDate() {
         Calendar calendar = Calendar.getInstance();
         calendar.set(1970, 1, 1);
         long earlierDate = calendar.getTime().getTime();
@@ -53,7 +42,7 @@ public class IDCardGenerator {
         return new Date(chosenDate);
     }
 
-    public static String getVerifyCode(String cardId) {
+    private static String getVerifyCode(String cardId) {
         String[] ValCodeArr = { "1", "0", "x", "9", "8", "7", "6", "5", "4",
             "3", "2" };
         String[] Wi = { "7", "9", "10", "5", "8", "4", "2", "1", "6", "3", "7",
