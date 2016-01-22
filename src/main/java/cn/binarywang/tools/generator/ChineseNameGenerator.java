@@ -16,7 +16,7 @@ public class ChineseNameGenerator {
 
     public static String generate() {
         return genFirstName()
-            + ChineseCharUtils.genRandomLengthChineseChars(1, 2);
+            + ChineseCharUtils.genRandomLengthChineseChars(1, 14);
     }
 
     private static String genFirstName() {
