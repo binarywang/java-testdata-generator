@@ -29,7 +29,11 @@ public class CSVFileGenerator {
         for (Map<String, Object> objects : data) {
             List<String> result = Lists.newArrayList();
             for (String column : columns) {
-                result.add(objects.get(column).toString());
+                if (objects.get(column) != null) {
+                    result.add(objects.get(column).toString());
+                } else {
+                    result.add("");
+                }
             }
 
             String lineData = Joiner.on(",").skipNulls().join(result);
