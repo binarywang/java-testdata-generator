@@ -23,7 +23,6 @@ public class SomethingTest {
         Map<String, String> relativeMap = Splitter.on(",")
             .withKeyValueSeparator("=").split("MOTHER=5,FATHER=5,SPOUSE=3");
 
-
         //[@"其他亲属", @"单位", @"子女", @"兄弟姐妹",  @"朋友", @"同事"]
         List<String> otherRelations = Lists.newArrayList("2", "4", "6", "7",
             "8", "9");
@@ -33,6 +32,13 @@ public class SomethingTest {
             String relation = relativeMap.get(string);
             if (relation != null) {
                 System.err.println(string + " : " + relation);
+            } else {
+                System.err
+                    .println(
+                        string + " : "
+                            + otherRelations.get(cn.binarywang.tools.RandomUtils
+                                .getRandomInstance()
+                                .nextInt(otherRelations.size())));
             }
         }
     }
