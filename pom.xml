@@ -16,6 +16,14 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+			<plugin>
+			<!-- 解决maven test命令时console出现中文乱码乱码 --> 
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<forkMode>once</forkMode>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
