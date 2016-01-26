@@ -8,7 +8,8 @@ public class ChineseMobileNumberGeneratorTest {
 
     @Test
     public void testGenerate() {
-        String generatedMobileNum = ChineseMobileNumberGenerator.generate();
+        String generatedMobileNum = ChineseMobileNumberGenerator.getInstance()
+            .generate();
         System.err.println(generatedMobileNum);
         assertNotNull(generatedMobileNum);
     }

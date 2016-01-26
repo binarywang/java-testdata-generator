@@ -17,7 +17,7 @@ public class IDCardNumberGeneratorTest {
 
     @Test
     public void testGenerate() {
-        String idCard = IDCardNumberGenerator.generate();
+        String idCard = IDCardNumberGenerator.getInstance().generate();
         System.err.println(idCard);
         assertNotNull(idCard);
     }

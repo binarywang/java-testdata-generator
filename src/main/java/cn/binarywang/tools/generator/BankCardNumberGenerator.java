@@ -13,9 +13,18 @@ import org.apache.commons.lang3.StringUtils;
  * 2，将奇位乘积的个十位全部相加，再加上所有偶数位上的数字
  * 3，将加法和加上校验位能被 10 整除。
  */
-public class BankCardNumberGenerator {
-    public static String generate() {
-        Random random = new Random();
+public class BankCardNumberGenerator extends GenericGenerator {
+    private static GenericGenerator instance = new BankCardNumberGenerator();
+    private BankCardNumberGenerator() {
+    }
+
+    public static GenericGenerator getInstance() {
+        return instance;
+    }
+
+    @Override
+    public String generate() {
+        Random random = getRandomInstance();
 //        ContiguousSet<Integer> sets = ContiguousSet
 //            .create(Range.closed(622126, 622925), DiscreteDomain.integers());
 //        ImmutableList<Integer> list = sets.asList();

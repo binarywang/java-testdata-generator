@@ -1,9 +1,8 @@
 package cn.binarywang.tools.generator;
 
 import cn.binarywang.tools.ChineseCharUtils;
-import cn.binarywang.tools.RandomUtils;
 
-public class ChineseNameGenerator {
+public class ChineseNameGenerator extends GenericGenerator {
     private static final String[] FIRST_NAMES = new String[] { "李", "王", "张",
         "刘", "陈", "杨", "黄", "赵", "周", "吴", "徐", "孙", "朱", "马", "胡", "郭", "林",
         "何", "高", "梁", "郑", "罗", "宋", "谢", "唐", "韩", "曹", "许", "邓", "萧", "冯",
@@ -19,16 +18,24 @@ public class ChineseNameGenerator {
         "百里", "呼延", "东郭", "南门", "羊舌", "微生", "公户", "公玉", "公仪", "梁丘", "公仲", "公上",
         "公门", "公山", "公坚", "左丘", "公伯", "西门", "公祖", "第五", "公乘", "贯丘", "公皙", "南荣",
         "东里", "东宫", "仲长", "子书", "子桑", "即墨", "达奚", "褚师", "吴铭" };
+    private static GenericGenerator instance = new ChineseNameGenerator();
 
-    public static String generate() {
+    private ChineseNameGenerator() {
+    }
+
+    public static GenericGenerator getInstance() {
+        return instance;
+    }
+
+    @Override
+    public String generate() {
         //姓名暂时还是两到三字，比较常见些
         return genFirstName()
             + ChineseCharUtils.genRandomLengthChineseChars(1, 2);
     }
 
-    private static String genFirstName() {
-        return FIRST_NAMES[RandomUtils.getRandomInstance()
-            .nextInt(FIRST_NAMES.length)];
+    private String genFirstName() {
+        return FIRST_NAMES[getRandomInstance().nextInt(FIRST_NAMES.length)];
     }
 
 }

@@ -8,7 +8,8 @@ public class ChineseAddressGeneratorTest {
 
     @Test
     public void testGenerate() {
-        String generatedAddress = ChineseAddressGenerator.generate();
+        String generatedAddress = ChineseAddressGenerator.getInstance()
+            .generate();
         System.err.println(generatedAddress);
         assertNotNull(generatedAddress);
     }

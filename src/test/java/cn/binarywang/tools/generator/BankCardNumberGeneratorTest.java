@@ -8,7 +8,7 @@ public class BankCardNumberGeneratorTest {
 
     @Test
     public void testGenerate() {
-        String bankCardNo = BankCardNumberGenerator.generate();
+        String bankCardNo = BankCardNumberGenerator.getInstance().generate();
         System.err.println(bankCardNo);
         assertNotNull(bankCardNo);
     }

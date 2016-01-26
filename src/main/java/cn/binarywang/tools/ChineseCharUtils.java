@@ -1,17 +1,16 @@
 package cn.binarywang.tools;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Date;
 import java.util.Random;
 
 public class ChineseCharUtils {
-
-    private static final Random RANDOM_INSTANCE = RandomUtils
-        .getRandomInstance();
+    private static Random random = new Random(new Date().getTime());
 
     public static String genOneChineseChars() {
         String str = null;
-        int highPos = (176 + Math.abs(RANDOM_INSTANCE.nextInt(39)));
-        int lowPos = 161 + Math.abs(RANDOM_INSTANCE.nextInt(93));
+        int highPos = (176 + Math.abs(random.nextInt(39)));
+        int lowPos = 161 + Math.abs(random.nextInt(93));
         byte[] b = new byte[] { (new Integer(highPos)).byteValue(),
             (new Integer(lowPos)).byteValue() };
 
@@ -35,7 +34,7 @@ public class ChineseCharUtils {
 
     public static String genRandomLengthChineseChars(int start, int end) {
         String str = "";
-        int length = RANDOM_INSTANCE.nextInt(end + 1);
+        int length = random.nextInt(end + 1);
         if (length < start) {
             str = genRandomLengthChineseChars(start, end);
         } else {

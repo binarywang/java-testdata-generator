@@ -8,7 +8,7 @@ public class EmailAddressGeneratorTest {
 
     @Test
     public void testGenerate() {
-        String generatedEmail = EmailAddressGenerator.generate();
+        String generatedEmail = EmailAddressGenerator.getInstance().generate();
         System.err.println(generatedEmail);
         assertNotNull(generatedEmail);
     }

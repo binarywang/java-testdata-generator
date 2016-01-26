@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import org.junit.Test;
 
@@ -39,17 +40,14 @@ public class SomethingTest {
         otherRelations.add("9");
         Collections.shuffle(otherRelations);
 
+        Random random = new Random();
         for (String string : relavtives) {
             String relation = relativeMap.get(string);
             if (relation != null) {
                 System.err.println(string + " : " + relation);
             } else {
-                System.err
-                    .println(
-                        string + " : "
-                            + otherRelations.get(cn.binarywang.tools.RandomUtils
-                                .getRandomInstance()
-                                .nextInt(otherRelations.size())));
+                System.err.println(string + " : " + otherRelations
+                    .get(random.nextInt(otherRelations.size())));
             }
         }
     }

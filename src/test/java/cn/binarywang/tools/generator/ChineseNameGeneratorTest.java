@@ -8,7 +8,7 @@ public class ChineseNameGeneratorTest {
 
     @Test
     public void testGenerate() {
-        String generatedName = ChineseNameGenerator.generate();
+        String generatedName = ChineseNameGenerator.getInstance().generate();
         System.err.println(generatedName);
         assertNotNull(generatedName);
     }

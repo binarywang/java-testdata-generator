@@ -7,7 +7,7 @@ import org.apache.commons.lang3.RandomUtils;
 
 import cn.binarywang.tools.ChineseCharUtils;
 
-public class ChineseAddressGenerator {
+public class ChineseAddressGenerator extends GenericGenerator {
     private static List<String> provinceCityList = new ArrayList<>();
 
     static {
@@ -358,7 +358,17 @@ public class ChineseAddressGenerator {
         provinceCityList.add("上海市上海市");
     }
 
-    public static String generate() {
+    private static GenericGenerator instance = new ChineseAddressGenerator();
+
+    private ChineseAddressGenerator() {
+    }
+
+    public static GenericGenerator getInstance() {
+        return instance;
+    }
+
+    @Override
+    public String generate() {
         StringBuilder result = new StringBuilder(genProvinceAndCity());
         result.append(ChineseCharUtils.genRandomLengthChineseChars(2, 3) + "路");
         result.append(RandomUtils.nextInt(1, 8000) + "号");
