@@ -4,6 +4,8 @@ import java.util.Random;
 
 import org.apache.commons.lang3.StringUtils;
 
+import cn.binarywang.tools.generator.base.GenericGenerator;
+
 /**
  * 效验是否为银行卡，用于验证
  * 现行 16 位银联卡现行卡号开头 6 位是 622126～622925 之间的，7 到 15 位是银行自定义的，

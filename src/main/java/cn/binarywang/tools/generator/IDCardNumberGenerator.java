@@ -10,6 +10,8 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.collect.Maps;
 
+import cn.binarywang.tools.generator.base.GenericGenerator;
+
 /**
  * 身份证号码
  * 1、号码的结构

@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.commons.lang3.RandomUtils;
 
 import cn.binarywang.tools.ChineseCharUtils;
+import cn.binarywang.tools.generator.base.GenericGenerator;
 
 public class ChineseAddressGenerator extends GenericGenerator {
     private static List<String> provinceCityList = new ArrayList<>();

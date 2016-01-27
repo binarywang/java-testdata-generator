@@ -3,6 +3,8 @@ package cn.binarywang.tools.generator;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import cn.binarywang.tools.generator.base.GenericGenerator;
+
 public class ChineseMobileNumberGenerator extends GenericGenerator {
     private static final int[] MOBILE_PREFIX = new int[] { 133, 153, 177, 180,
         181, 189, 134, 135, 136, 137, 138, 139, 150, 151, 152, 157, 158, 159,

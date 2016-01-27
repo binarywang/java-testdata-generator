@@ -1,4 +1,4 @@
-package cn.binarywang.tools.generator;
+package cn.binarywang.tools.generator.base;
 
 import java.util.Date;
 import java.util.Random;

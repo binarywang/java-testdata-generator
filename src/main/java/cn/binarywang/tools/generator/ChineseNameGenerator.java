@@ -1,6 +1,7 @@
 package cn.binarywang.tools.generator;
 
 import cn.binarywang.tools.ChineseCharUtils;
+import cn.binarywang.tools.generator.base.GenericGenerator;
 
 public class ChineseNameGenerator extends GenericGenerator {
     private static final String[] FIRST_NAMES = new String[] { "李", "王", "张",
