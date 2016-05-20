@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.joda.time.DateTime;
 
 import com.google.common.collect.Maps;
 
@@ -30,15 +31,40 @@ import cn.binarywang.tools.generator.base.GenericGenerator;
  * 2 （2）计算模 Y = mod(S, 11) （3）通过模得到对应的校验码 Y: 0 1 2 3 4 5 6 7 8 9 10 校验码: 1 0
  * X 9 8 7 6 5 4 3 2
  */
-public class IDCardNumberGenerator extends GenericGenerator {
-    private static GenericGenerator instance = new IDCardNumberGenerator();
+public class ChineseIDCardNumberGenerator extends GenericGenerator {
+    private static GenericGenerator instance = new ChineseIDCardNumberGenerator();
 
-    private IDCardNumberGenerator() {
+    private ChineseIDCardNumberGenerator() {
     }
 
     public static GenericGenerator getInstance() {
         return instance;
     }
+
+    /**
+     * 生成签发机关：XXX公安局/XX区分局
+     * Authority
+     * 
+     * @return
+     */
+    public static String generateIssueOrg() {
+        return ChineseAreaList.cityNameList
+            .get(RandomUtils.nextInt(0, ChineseAreaList.cityNameList.size()))
+            + "公安局某某分局";
+    }
+
+    /**
+     * 生成有效期限：20150906-20350906
+     * Valid Through
+     * @return
+     */
+    public static String generateValidPeriod() {
+        DateTime beginDate =new DateTime(randomDate()) ;
+        String formater = "yyyyMMdd";
+        DateTime endDate = beginDate.withYear(beginDate.getYear() + 20);
+        return beginDate.toString(formater) + "-" + endDate.toString(formater);
+    }
+
     @Override
     public String generate() {
         Map<String, String> code = getAreaCode();
