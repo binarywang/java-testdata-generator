@@ -1,6 +1,5 @@
 package cn.binarywang.tools.generator;
 
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Guice;
@@ -64,7 +63,7 @@ public class InsertSQLGeneratorTest {
      * .
      */
     public void testGenerateParams() {
-        Assert.fail("Not yet implemented");
+        System.err.println(this.generator.generateParams());
     }
 
 }
