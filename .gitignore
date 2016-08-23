@@ -3,3 +3,4 @@
 *.project
 /.settings/
 *.csv
+/test-output/
