@@ -1,17 +1,23 @@
 package cn.binarywang.tools.generator;
 
-import static org.junit.Assert.assertNotNull;
+import static org.testng.AssertJUnit.assertNotNull;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
+@Test
 public class ChineseMobileNumberGeneratorTest {
 
-    @Test
     public void testGenerate() {
         String generatedMobileNum = ChineseMobileNumberGenerator.getInstance()
             .generate();
-        System.err.println(generatedMobileNum);
         assertNotNull(generatedMobileNum);
+        System.err.println(generatedMobileNum);
     }
 
+    public void testGgenerateFake() {
+        String generatedMobileNum = ChineseMobileNumberGenerator.getInstance()
+            .generateFake();
+        assertNotNull(generatedMobileNum);
+        System.err.println(generatedMobileNum);
+    }
 }

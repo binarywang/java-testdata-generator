@@ -1,10 +1,10 @@
 package cn.binarywang.tools.generator;
 
-import static org.junit.Assert.assertNotNull;
+import static org.testng.Assert.assertNotNull;
 
 import java.util.Date;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class ChineseIDCardNumberGeneratorTest {
 
