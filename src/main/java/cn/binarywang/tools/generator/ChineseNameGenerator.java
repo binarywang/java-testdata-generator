@@ -24,12 +24,12 @@ public class ChineseNameGenerator extends GenericGenerator {
      * "公门", "公山", "公坚", "左丘", "公伯", "西门", "公祖", "第五", "公乘", "贯丘", "公皙", "南荣",
      * "东里", "东宫", "仲长", "子书", "子桑", "即墨", "达奚", "褚师", "吴铭"
      */
-    private static GenericGenerator instance = new ChineseNameGenerator();
+    private static ChineseNameGenerator instance = new ChineseNameGenerator();
 
     private ChineseNameGenerator() {
     }
 
-    public static GenericGenerator getInstance() {
+    public static ChineseNameGenerator getInstance() {
         return instance;
     }
 
