@@ -44,4 +44,10 @@ public class ChineseNameGenerator extends GenericGenerator {
         return FIRST_NAMES[getRandomInstance().nextInt(FIRST_NAMES.length)];
     }
 
+    /**
+     * 生成带有生僻名字部分的姓名
+     */
+    public String generateOdd() {
+        return genFirstName() + ChineseCharUtils.getOneOddChar();
+    }
 }
