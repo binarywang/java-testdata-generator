@@ -25,6 +25,14 @@ public class ChineseMobileNumberGenerator extends GenericGenerator {
             .leftPad("" + RandomUtils.nextInt(0, 99999999 + 1), 8, "0");
     }
 
+    /**
+     * 生成假的手机号，以19开头
+     */
+    public String generateFake() {
+        return "19" + StringUtils
+            .leftPad("" + RandomUtils.nextInt(0, 999999999 + 1), 9, "0");
+    }
+
     private static String genMobilePre() {
         return "" + MOBILE_PREFIX[RandomUtils.nextInt(0, MOBILE_PREFIX.length)];
     }
