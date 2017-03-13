@@ -3,5 +3,12 @@
 [![Build Status](https://travis-ci.org/binarywang/java-generator.svg?branch=develop)](https://travis-ci.org/binarywang/java-generator)
 ![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.binarywang.tools/java-generator/badge.svg)
 
-
-
+ 
+Maven 引用方式
+```
+<dependency>
+    <groupId>com.github.binarywang</groupId>
+    <artifactId>java-generator</artifactId>
+    <version>1.0.0</version>
+</dependency>
+````
