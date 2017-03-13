@@ -2,8 +2,10 @@
 
 [![Build Status](https://travis-ci.org/binarywang/java-generator.svg?branch=develop)](https://travis-ci.org/binarywang/java-generator)
 ![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.binarywang.tools/java-generator/badge.svg)
-
  
+具体用法请参考单元测试
+
+
 Maven 引用方式
 ```
 <dependency>
