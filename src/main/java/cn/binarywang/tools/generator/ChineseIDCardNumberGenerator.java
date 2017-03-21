@@ -1,17 +1,15 @@
 package cn.binarywang.tools.generator;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Map;
-
+import cn.binarywang.tools.generator.base.GenericGenerator;
+import com.google.common.collect.Maps;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 
-import com.google.common.collect.Maps;
-
-import cn.binarywang.tools.generator.base.GenericGenerator;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Map;
 
 /**
  * 身份证号码
@@ -44,8 +42,6 @@ public class ChineseIDCardNumberGenerator extends GenericGenerator {
     /**
      * 生成签发机关：XXX公安局/XX区分局
      * Authority
-     * 
-     * @return
      */
     public static String generateIssueOrg() {
         return ChineseAreaList.cityNameList
@@ -56,7 +52,6 @@ public class ChineseIDCardNumberGenerator extends GenericGenerator {
     /**
      * 生成有效期限：20150906-20350906
      * Valid Through
-     * @return
      */
     public static String generateValidPeriod() {
         DateTime beginDate =new DateTime(randomDate()) ;
