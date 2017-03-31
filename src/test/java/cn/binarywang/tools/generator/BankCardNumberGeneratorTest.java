@@ -1,10 +1,16 @@
 package cn.binarywang.tools.generator;
 
-import static org.testng.Assert.assertNotNull;
+import org.testng.annotations.*;
 
-import org.testng.annotations.Test;
+import static org.testng.Assert.*;
 
 public class BankCardNumberGeneratorTest {
+    @Test
+    public void testGenerateByPrefix() throws Exception {
+        String bankCardNo = BankCardNumberGenerator.generateByPrefix(436742);
+        System.err.println(bankCardNo);
+        assertNotNull(bankCardNo);
+    }
 
     @Test
     public void testGenerate() {
