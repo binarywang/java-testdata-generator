@@ -1,10 +1,25 @@
-package cn.binarywang.tools.generator;
+package cn.binarywang.tools.generator.bank;
 
 import org.testng.annotations.*;
 
 import static org.testng.Assert.*;
 
 public class BankCardNumberGeneratorTest {
+    @Test
+    public void testGenerate_by_bankName() throws Exception {
+        String bankCardNo = BankCardNumberGenerator.generate(BankNameEnum.CR, null);
+        System.err.println(bankCardNo);
+        assertNotNull(bankCardNo);
+
+        bankCardNo = BankCardNumberGenerator.generate(BankNameEnum.ICBC, BankCardTypeEnum.CREDIT);
+        System.err.println(bankCardNo);
+        assertNotNull(bankCardNo);
+
+        bankCardNo = BankCardNumberGenerator.generate(BankNameEnum.ICBC, BankCardTypeEnum.DEBIT);
+        System.err.println(bankCardNo);
+        assertNotNull(bankCardNo);
+    }
+
     @Test
     public void testGenerateByPrefix() throws Exception {
         String bankCardNo = BankCardNumberGenerator.generateByPrefix(436742);
