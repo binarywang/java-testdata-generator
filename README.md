@@ -16,3 +16,10 @@ Maven 引用方式
     <version>1.0.0</version>
 </dependency>
 ````
+--------------------
+gradle 引用方式
+
+```
+compile 'com.github.binarywang:java-generator:1.0.0'
+
+```
