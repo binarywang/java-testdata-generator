@@ -13,6 +13,6 @@ Maven 引用方式
 <dependency>
     <groupId>com.github.binarywang</groupId>
     <artifactId>java-generator</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ````
