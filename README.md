@@ -5,7 +5,7 @@
 
 
 --------------
-具体用法请参考单元测试
+具体用法请参考单元测试（即https://github.com/binarywang/java-testdata-generator/tree/master/src/test/java/cn/binarywang/tools/generator下的文件）
 
 --------------------
 Maven 引用方式
