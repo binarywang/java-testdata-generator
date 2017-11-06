@@ -1,11 +1,12 @@
-各种随机生成器，包括身份证号码，银行卡号，姓名，手机号，电子邮箱地址等。
+Java实现的各种随机测试数据生成器，包括身份证号码，银行卡号，姓名，手机号，电子邮箱地址和生成insert sql参数列表字符串等。
 
 [![Build Status](https://travis-ci.org/binarywang/java-generator.svg?branch=develop)](https://travis-ci.org/binarywang/java-generator)
 ![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.binarywang/java-generator/badge.svg)
 
 
 --------------
-具体用法请参考单元测试（即https://github.com/binarywang/java-testdata-generator/tree/master/src/test/java/cn/binarywang/tools/generator下的文件）
+具体用法请参考单元测试：
+即 https://github.com/binarywang/java-testdata-generator/tree/master/src/test/java/cn/binarywang/tools/generator 下的测试类
 
 --------------------
 Maven 引用方式
