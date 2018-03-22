@@ -1,10 +1,11 @@
 package cn.binarywang.tools.generator.bank;
 
-import cn.binarywang.tools.generator.base.GenericGenerator;
+import java.util.Random;
+
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.Date;
-import java.util.Random;
+import cn.binarywang.tools.generator.base.GenericGenerator;
+import cn.binarywang.tools.generator.util.LuhnUtils;
 
 /**
  * <pre>
@@ -46,23 +47,13 @@ public class BankCardNumberGenerator extends GenericGenerator {
      * </pre>
      */
     public static String generateByPrefix(Integer prefix) {
-        Random random = new Random(new Date().getTime());
+        Random random = new Random(System.currentTimeMillis());
         String bardNo = prefix
             + StringUtils.leftPad(random.nextInt(999999999) + "", 9, "0");
 
         char[] chs = bardNo.trim().toCharArray();
-        int luhmSum = 0;
-        for (int i = chs.length - 1, j = 0; i >= 0; i--, j++) {
-            int k = chs[i] - '0';
-            if (j % 2 == 0) {
-                k *= 2;
-                k = k / 10 + k % 10;
-            }
-            luhmSum += k;
-        }
-
-        char checkCode = luhmSum % 10 == 0 ? '0' : (char) (10 - luhmSum % 10 + '0');
-
+        int luhnSum = LuhnUtils.getLuhnSum(chs);
+        char checkCode = luhnSum % 10 == 0 ? '0' : (char) (10 - luhnSum % 10 + '0');
         return bardNo + checkCode;
     }
 
@@ -80,11 +71,12 @@ public class BankCardNumberGenerator extends GenericGenerator {
         } else {
             switch (cardType) {
                 case DEBIT:
-                    candidatePrefixes = bankName.getDebtCardPrefixes();
+                    candidatePrefixes = bankName.getDebitCardPrefixes();
                     break;
                 case CREDIT:
                     candidatePrefixes = bankName.getCreditCardPrefixes();
                     break;
+                default:
             }
         }
 

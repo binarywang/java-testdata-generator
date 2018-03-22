@@ -2,7 +2,7 @@ package cn.binarywang.tools.generator;
 
 import org.apache.commons.lang3.RandomUtils;
 
-import cn.binarywang.tools.ChineseCharUtils;
+import cn.binarywang.tools.generator.util.ChineseCharUtils;
 import cn.binarywang.tools.generator.base.GenericGenerator;
 
 public class ChineseAddressGenerator extends GenericGenerator {

@@ -6,7 +6,7 @@ import static org.testng.Assert.*;
 
 public class BankCardNumberGeneratorTest {
     @Test
-    public void testGenerate_by_bankName() throws Exception {
+    public void testGenerate_by_bankName() {
         String bankCardNo = BankCardNumberGenerator.generate(BankNameEnum.CR, null);
         System.err.println(bankCardNo);
         assertNotNull(bankCardNo);
@@ -21,7 +21,7 @@ public class BankCardNumberGeneratorTest {
     }
 
     @Test
-    public void testGenerateByPrefix() throws Exception {
+    public void testGenerateByPrefix() {
         String bankCardNo = BankCardNumberGenerator.generateByPrefix(436742);
         System.err.println(bankCardNo);
         assertNotNull(bankCardNo);

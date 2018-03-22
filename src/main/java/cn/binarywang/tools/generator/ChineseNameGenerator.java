@@ -1,6 +1,6 @@
 package cn.binarywang.tools.generator;
 
-import cn.binarywang.tools.ChineseCharUtils;
+import cn.binarywang.tools.generator.util.ChineseCharUtils;
 import cn.binarywang.tools.generator.base.GenericGenerator;
 
 public class ChineseNameGenerator extends GenericGenerator {

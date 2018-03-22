@@ -250,7 +250,7 @@ public enum BankNameEnum {
     /**
      * 借记卡卡号前缀数组
      */
-    private Integer[] debtCardPrefixes;
+    private Integer[] debitCardPrefixes;
 
     /**
      * 所有卡号前缀数组
@@ -268,30 +268,30 @@ public enum BankNameEnum {
         this.abbrName = abbrName;
     }
 
-    BankNameEnum(String code, String name, String abbrName, Integer[] debtCardPrefixes, Integer[] creditCardPrefixes) {
+    BankNameEnum(String code, String name, String abbrName, Integer[] debitCardPrefixes, Integer[] creditCardPrefixes) {
         this.code = code;
         this.name = name;
         this.abbrName = abbrName;
         this.creditCardPrefixes = creditCardPrefixes;
-        this.debtCardPrefixes = debtCardPrefixes;
+        this.debitCardPrefixes = debitCardPrefixes;
 
-        this.allCardPrefixes = ArrayUtils.addAll(this.creditCardPrefixes, this.debtCardPrefixes);
+        this.allCardPrefixes = ArrayUtils.addAll(this.creditCardPrefixes, this.debitCardPrefixes);
     }
 
-    BankNameEnum(String code, String name, Integer[] debtCardPrefixes) {
+    BankNameEnum(String code, String name, Integer[] debitCardPrefixes) {
         this.code = code;
         this.name = name;
-        this.debtCardPrefixes = debtCardPrefixes;
-        this.allCardPrefixes = debtCardPrefixes;
+        this.debitCardPrefixes = debitCardPrefixes;
+        this.allCardPrefixes = debitCardPrefixes;
     }
 
-    BankNameEnum(String code, String name, Integer[] debtCardPrefixes, Integer[] creditCardPrefixes) {
+    BankNameEnum(String code, String name, Integer[] debitCardPrefixes, Integer[] creditCardPrefixes) {
         this.code = code;
         this.name = name;
         this.creditCardPrefixes = creditCardPrefixes;
-        this.debtCardPrefixes = debtCardPrefixes;
+        this.debitCardPrefixes = debitCardPrefixes;
 
-        this.allCardPrefixes = ArrayUtils.addAll(this.creditCardPrefixes, this.debtCardPrefixes);
+        this.allCardPrefixes = ArrayUtils.addAll(this.creditCardPrefixes, this.debitCardPrefixes);
     }
 
     public String getName() {
@@ -306,8 +306,8 @@ public enum BankNameEnum {
         return this.creditCardPrefixes;
     }
 
-    public Integer[] getDebtCardPrefixes() {
-        return this.debtCardPrefixes;
+    public Integer[] getDebitCardPrefixes() {
+        return this.debitCardPrefixes;
     }
 
     public Integer[] getAllCardPrefixes() {

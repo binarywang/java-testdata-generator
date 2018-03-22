@@ -1,4 +1,4 @@
-package cn.binarywang.tools;
+package cn.binarywang.tools.generator.util;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
