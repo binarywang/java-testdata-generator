@@ -6,7 +6,7 @@ Java实现的各种随机测试数据生成器，包括身份证号码，银行�
 
 --------------
 具体用法请参考单元测试：
-即 https://github.com/binarywang/java-testdata-generator/tree/master/src/test/java/cn/binarywang/tools/generator 下的测试类
+即 /src/test/java/cn/binarywang/tools/generator 下的测试类
 
 --------------------
 Maven 引用方式
