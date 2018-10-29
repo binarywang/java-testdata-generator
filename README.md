@@ -1,4 +1,4 @@
-[![码云Gitee](https://gitee.com/binary/java-testdata-generator/badge/star.svg?theme=blue)](https://gitee.com/binary/java-testdata-generator)
+[![码云Gitee](https://gitee.com/binary/java-generator/badge/star.svg?theme=blue)](https://gitee.com/binary/java-generator)
 [![Github](http://github-svg-buttons.herokuapp.com/star.svg?user=binarywang&repo=java-testdata-generator&style=flat&background=1081C1)](https://github.com/binarywang/java-testdata-generator)
 [![Build Status](https://travis-ci.org/binarywang/java-testdata-generator.svg?branch=master)](https://travis-ci.org/binarywang/java-testdata-generator)
 ![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.binarywang/java-testdata-generator/badge.svg)
