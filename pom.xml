@@ -5,8 +5,8 @@
     <artifactId>java-testdata-generator</artifactId>
     <version>1.1.1</version>
     <packaging>jar</packaging>
-    <name>Java Generator Tools</name>
-    <description>Java Generator Tools</description>
+    <name>Java Test Data Generator Tools</name>
+    <description>Java Test Data Generator Tools</description>
     <url>https://github.com/binarywang/java-generator</url>
 
     <properties>
