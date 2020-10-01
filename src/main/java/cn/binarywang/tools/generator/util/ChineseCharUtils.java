@@ -185,6 +185,7 @@ public class ChineseCharUtils {
     }
 
     public static void main(String args[]) {
+        System.out.println("Application started...");
         System.out.println(genOneChineseChars());
         System.out.println(genFixedLengthChineseChars(20));
         System.out.println(genRandomLengthChineseChars(2, 10));
