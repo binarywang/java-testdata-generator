@@ -184,9 +184,5 @@ public class ChineseCharUtils {
             .charAt(random.nextInt(ODD_CHINESE_CHARS.length()));
     }
 
-    public static void main(String args[]) {
-        System.out.println(genOneChineseChars());
-        System.out.println(genFixedLengthChineseChars(20));
-        System.out.println(genRandomLengthChineseChars(2, 10));
-    }
+
 }
