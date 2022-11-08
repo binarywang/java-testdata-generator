@@ -15,6 +15,7 @@ import com.google.inject.Module;
  */
 public class TestConfigModule implements Module {
 
+    /** 合并*/
     @Override
     public void configure(Binder binder) {
         Properties p = new Properties();
