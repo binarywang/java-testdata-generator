@@ -166,7 +166,7 @@
                 <version>0.7.0</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <deploymentName>Release ${project.version} (Maven)</deploymentName>
+                    <deploymentName>Release ${project.artifactId}:${project.version}</deploymentName>
                     <publishingServerId>central</publishingServerId>
                     <autoPublish>true</autoPublish>
                 </configuration>

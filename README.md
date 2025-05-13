@@ -16,6 +16,15 @@ Maven 引用方式
 <dependency>
     <groupId>com.github.binarywang</groupId>
     <artifactId>java-testdata-generator</artifactId>
-    <version>1.1.2</version>
+    <version>1.1.2</version>
 </dependency>
 ````
+
+
+```shell
+git add .
+git commit -m "updat deploymentName"
+
+git pull --rebase
+git push origin
+```
