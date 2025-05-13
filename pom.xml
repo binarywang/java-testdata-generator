@@ -80,17 +80,6 @@
         </dependency>
     </dependencies>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
-
     <profiles>
         <profile>
             <id>doclint-java8-disable</id>
@@ -177,6 +166,7 @@
                 <version>0.7.0</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <deploymentName>Release ${project.version} (Maven)</deploymentName>
                     <publishingServerId>central</publishingServerId>
                     <autoPublish>true</autoPublish>
                 </configuration>
